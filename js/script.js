@@ -12,14 +12,13 @@ const tavoloVip = [
   "Amal Clooney",
   "Maneskin",
 ];
-let tavoloVipIterated = [];
-tavoloVip.forEach((e, index) => {
-  tavoloVipIterated.push({
-    nomeTavolo: "Tavolo VIP",
-    nomeOspite: e,
-    posto: index + 1,
-  });
-});
+let tavoloVipIterated = tavoloVip.map((e, index)=>{
+    return {
+        nomeTavolo: "Tavolo VIP",
+        nomeOspite: e,
+        posto: index + 1,
+      }
+})
 console.log(tavoloVipIterated);
 
 // SNACK 2
